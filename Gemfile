@@ -8,6 +8,7 @@ group :test do
   gem 'simplecov-console', require: false, group: :test
   gem 'capybara'
   gem 'webdrivers', '~> 5.0', require: false
+  gem 'launchy'
 end
 
 group :development, :test do
