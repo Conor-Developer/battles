@@ -103,6 +103,7 @@ require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
 require 'launchy'
+require_relative './features/web_helpers'
 
 Capybara.app = Battle
 
