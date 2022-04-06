@@ -7,7 +7,14 @@ class Battle < Sinatra::Base
   end
 
   get '/' do
-    "Testing infrastructure working!"
+    erb(:index)
+  end
+
+  post '/names' do
+    p params
+    @player_1 = params[:player_1]
+    @player_2 = params[:player_2]
+    erb(:play)
   end
 
 

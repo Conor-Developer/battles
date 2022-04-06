@@ -1,6 +1,9 @@
-feature "Testing infrastructure" do
-  scenario "Check that homepage says Testing infrastructure working!" do
+feature 'Testing infrastructure' do
+  scenario 'Expects two players to fill in their names (in a form)' do
     visit('/')
-    expect(page).to have_content "Testing infrastructure working!"
+    fill_in 'player_1', with: 'Conor'
+    fill_in 'player_2', with: 'Jordan'
+    click_button('Submit')
+    expect(page).to have_content 'Conor vs Jordan'
   end
 end
