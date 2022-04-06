@@ -1,4 +1,4 @@
-feature 'Testing infrastructure' do
+feature 'Enter names' do
   scenario 'Expects two players to fill in their names (in a form)' do
     visit('/')
     fill_in 'player_1', with: 'Conor'
