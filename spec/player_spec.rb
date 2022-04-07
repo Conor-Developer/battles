@@ -18,16 +18,9 @@ describe Player do
     end
   end
 
-  context '#Attack' do
-    it 'damages the player' do
-      expect(player_1).to receive(:take_damage)
-      player_2.attack(player_1)
-    end
-  end
 
   context '#take_damage' do
     it 'to reduce player 2\'s hit points by 10' do
-      player_1.attack(player_2)
       expect { player_2.take_damage }.to change { player_2.hp }.by(-10)
     end
   end
