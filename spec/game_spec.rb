@@ -16,4 +16,13 @@ describe Game do
       expect(game.player1).to be_instance_of(Player)
     end
   end
+  
+  context 'switching player' do
+    it "shows you can change player after attack" do
+      game = Game.new(Player.new('Conor'), Player.new('Bal'))
+      game.next_turn
+      expect(game.current_turn.name).to eq "Bal" 
+    end
+  end
+
 end
