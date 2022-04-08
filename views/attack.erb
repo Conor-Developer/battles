@@ -1,3 +1,9 @@
-<%= @player_1.name %> attacked <%= @player_2.name %>
+<%= $game.current_turn.name %> attacked <%= $game.next_turn.name %>
 
-<%= @player_2.name %> 's HP is now <%= @player_2.hp %>
+<br>
+
+<%= $game.next_turn.name %> 's HP is now <%= $game.next_turn.hp %>
+
+<form action="/play">
+  <input type="submit" value="Ok">
+</form>
